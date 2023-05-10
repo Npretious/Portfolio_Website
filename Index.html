@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <!-- Head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Nicholas Pretious Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="../Portfolio_Website/stylesheet/portfolio.css">
+    </head>
+
+    <!-- Body -->
+    <body class="Background">
+
+        <!-- Navbar -->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">Github</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!-- Breaks inserted to add space between navbar and the first heading -->
+        <br>
+        <br>
+
+        <!-- Background video -->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="..\Portfolio_Website\Images\Video\Coding_Typing.mp4" type="video/mp4">
+                <!-- Display message if video fails to run -->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!-- Video text -->
+        <div class="Video_Text">
+            <h1 class="white-text">Nicholas Pretious' Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>Programming today is a race between software engineers striving to build bigger and better idiot-proof programs and the Universe trying to produce bigger and better idiots.
+                    <br>
+                    <br> So far, the Universe is winning.
+                    </q>
+                    <br>
+                    <br> ― Rick Cook
+                    <br>
+                    <br>
+                    <br>Welcome to my portfolio website!
+                    <br>
+                    <br> Here, ill tell you about my experience and background in the space.
+                    <br>
+                    <br>Thanks for the visit and have an amazing day!
+                </p>
+            </strong>
+        </div>
+
+        <!-- About section -->
+        <div class="Row" id="About">
+            <!-- Left column -->
+            <div class="Column_2">
+                <img src="..\Portfolio_Website\\Images\Coding_Picture.jpg" alt="Laptop Coding Picture">
+            </div>
+            <!-- Right column -->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    Hello! I am currently a student software developer with a passion for learning and excited to be gaining knowledge on all of these computer languages!   
+                    <br>
+                    <br>To elaborate, I'm a student of Academy Of Learning Career College, and enrolled in software and web development!
+                    <br>
+                    <br>At this time, I'm learning the following languages: HTML, and CSS.
+                    <br>
+                </p>
+            </div>
+        </div>
+
+        <!-- GitHub section -->
+        <div class="Row" id="GitHub">
+            <!--Left Column-->
+            <div class="Column_1">
+                <h1>Github</h1>
+                <p>
+                    You can view all of my projects on my Github profile by following the link below:
+                    <br>
+                    <br>
+                    <a href="https://github.com/Npretious" target="_blank">Nicholas Pretious' Github</a>    
+                </p>
+            </div>
+            <!--Right Column-->
+            <div class="Column_2">
+                <img src="..\Portfolio_Website\Images\Github_logo.png" alt="GitHub Logo"</a>
+            </div>
+        </div>
+
+        <!-- Contact section -->
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_tall">
+                <img src="..\Portfolio_Website\Images\contactus.png" alt="Contact Us Picture">
+            </div>
+            <!--Contact form, right column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <!--This specifies where and how to send the form data-->
+                <form action="https://formspree.io/f/xlekzppq" method="POST">
+                    <label>Name:</label>
+                        <input type="text" placeholder="Enter name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Enter email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" placeholder="Write your inquiry here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>
+                <p class="center">&copy Nicholas Pretious | 2023</p>
+            </p>
+        </footer>
+    </body>
+</html>
