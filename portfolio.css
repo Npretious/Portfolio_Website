@@ -314,17 +314,9 @@ footer {
 .Column_1 {
     float: left;
     width: 50%; /* This ensures the column takes up half of the page width */
-    padding: 10px;
-    height: 400px;  /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    padding-top: 3%; /* Sets padding top to 3% */
+    padding: 1.6%;
+    height: 450px;  /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
     background-color: white; /* Sets the background color of the left columns */
-}
-
-/* Screens 600px and smaller will display a scroll bar if the text overflows the column height */
-@media screen and (max-width: 600px) {
-    .Column_1 {
-        overflow: auto;
-    }
 }
 
 .Column_2 {
