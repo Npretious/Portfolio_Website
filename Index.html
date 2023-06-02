@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width" />
         <title>Nicholas Pretious Portfolio</title>
+        <link rel="shortcut icon" type="img/jpg" href="Images/coding_icon.png">
         <link rel="stylesheet" type="text/css" href="Stylesheet/portfolio.css">
     </head>
 
@@ -14,14 +15,12 @@
         <!-- Navbar -->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">Github</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
 
-        <!-- Breaks inserted to add space between navbar and the first heading -->
-        <br>
-        <br>
 
         <!-- Background video -->
         <div id="Home">
@@ -54,6 +53,52 @@
             </strong>
         </div>
 
+        <!--Slideshow section added -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Images/personal1.jpg" alt="">
+                        <div class="text">I'm available to assist you on your project</div>
+                    </div>
+                    <!-- Slide 2 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Images/Coding2.jpg" alt="">
+                        <div class="text">I am a full-time student software developer,<br> so far trained in:</div>
+                    </div>
+                    <!-- Slide 3 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Images/HTML_CSS_and_JavaScript.jpeg" alt="">
+                        <div class="text">HTML, CSS, and JavaScript.</div>
+                    </div>
+                    <!-- Slide 4 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Images/GitHub.png" alt="">
+                        <div class="text">Will update my portfolio here as well on GitHub as I learn more languages..</div>
+                    </div>
+                    <!-- Slide 5 of 5 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="Images/contact2.jpg" alt="">
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                    </div>
+                    <!--Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow)-->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </div>
+
         <!-- About section -->
         <div class="Row" id="About">
             <!-- Left column -->
@@ -69,7 +114,6 @@
                     <br>To elaborate, I'm a student of Academy Of Learning Career College, and enrolled in software and web development!
                     <br>
                     <br>At this time, I'm learning the following languages: HTML, and CSS.
-                    <br>
                 </p>
             </div>
         </div>
@@ -82,34 +126,34 @@
                 <p>
                     You can view all of my projects on my Github profile by following the link below:
                     <br>
-                    <br>
                     <a href="https://github.com/Npretious" target="_blank">Nicholas Pretious' Github</a>    
                 </p>
             </div>
             <!--Right Column-->
             <div class="Column_2">
-                <img src="Images\Github_logo.png" alt="GitHub Logo"</a>
+                <img src="Images\Github_logo.png" alt="GitHub Logo"></a>
             </div>
         </div>
 
         <!-- Contact section -->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="Images\contactus.png" alt="Contact Us Picture">
-            </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
+        <!-- Contact form -->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
                 <!--This specifies where and how to send the form data-->
-                <form action="https://formspree.io/f/xlekzppq" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Enter name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Enter email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" placeholder="Write your inquiry here">
-                        <input type="submit" value="SUBMIT">
+                <form action="https://formspree.io/f/xlekzppq" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                      <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                      <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>		
+                      <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                      <input type="text" placeholder="Type your message here" name="message">
+         
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
@@ -120,5 +164,6 @@
                 <p class="center">&copy Nicholas Pretious | 2023</p>
             </p>
         </footer>
+        <script src="js/portfolio.js"></script>
     </body>
 </html>
